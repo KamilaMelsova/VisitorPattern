@@ -2,7 +2,7 @@ package Visitor;
 public class App {
     public static void main(String[] args){
         Exhibit e1 = new Painting("Starry night", "Van Gogh");
-        Exhibit e2 = new Painting("David", "Michelangelo");
+        Exhibit e2 = new Sculpture("David", "Michelangelo");
         IExhibitVisitor audioGuide = new AudioGuideVisitor();
         IExhibitVisitor lighting = new LightingVisitor();
         IExhibitVisitor digitalArchive = new DigitalArchiveVisitor();
@@ -11,3 +11,4 @@ public class App {
         e2.accept(digitalArchive);
     }
 }
+
